@@ -1,5 +1,3 @@
-let numeros = [];
-
 class Crearelemento{
     constructor(numerodeorden, especificaciones, reparacion, precio){
         numerodeorden = numerodeorden;
@@ -7,17 +5,25 @@ class Crearelemento{
         reparacion = reparacion;
         precio = precio;
     }
+
 }
 
 let numerodeorden = 0;
-function generarelemento(){
-for (i = numerodeorden; i++;) {
-    let especificaciones = prompt("Ingrese las especificaciones de la computadora");
+let boton = document.getElementById("boton");
+
+boton.addEventListener("click", () => {
+console.log("SELECCIONADO");
+})
+function generarorden(){
+ numerodeorden ++;
+
+ /*    let especificaciones = prompt("Ingrese las especificaciones de la computadora");
     let reparacion = prompt("Ingrese los daños a reparar");
-    let precio = Number(prompt("Ingrese el precio"));
-    Crearelemento(numerodeorden, especificaciones, reparacion, precio);
-    numeros.push(Crearelemento);
-    console.log(numerodeorden);
-break;
-}
+    let precio = Number(prompt("Ingrese el precio")); */
+/*     let tabla = document.createElement("table");
+    tabla.setAttribute("border", "3"); intente crear una tabla con celdas pero no pude
+    document.body.appendChild(tabla); */
+
+ let elemento = new Crearelemento(numerodeorden, especificaciones, reparacion, precio);
+console.log(numerodeorden);
 }
