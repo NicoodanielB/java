@@ -1,0 +1,49 @@
+.formulariodeagregar{
+    width: 50%;
+    height: 65vh;
+    border: 1px solid black;
+}
+
+.formulariodeagregar div{
+    width: 35%;
+    border: 1px solid black;
+}
+.formulariodeagregar div label{
+display: block;
+}
+input{
+  font: 1em sans-serif;
+
+  box-sizing: border-box;
+
+  border: 1px solid #999;
+}
+textarea{ 
+     font: 1em sans-serif;
+
+    box-sizing: border-box;
+  width: 100%;
+  height: 10vh;
+    border: 1px solid #999;}
+.labeltextarea {
+
+    display: inline-block;
+    position: relative;
+    width: 150px;
+    text-align: center;
+  }
+  #div2{
+      height: 50%;
+      position: relative;
+      bottom: 115px;
+      right: -50%;
+  }
+  #contenedor{
+      border: 0px;
+      width: 100%;
+  }
+
+  #submit{
+      position: relative;
+      bottom: 80px;
+  }

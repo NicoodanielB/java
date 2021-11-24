@@ -5,10 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <textarea id="texto" placeholder="INGRESE LAS ESPECIFICACIONES"></textarea>
-    <button id="boton">Aceptar</button>
+    <form class="formulariodeagregar">
+        <label for="numerodeorden">Nº de orden</label>
+        <input id="orden" type="text" name="numerodeorden">
+        <p>
+        <label for="fecha">Fecha de recepcion</label>
+        <input id="fecha" type="date" name="fecha">
+        <p>
+        <label for="cliente">Cliente</label>
+        <input id="cliente" type="text" name="cliente" >
+        <p>
+        <label for="domicilio">Domicilio:</label>
+        <input id="domicilio" type="text" name="domicilio">
+        <p>
+        <label for="mail">Email:</label>
+        <input id="email" type="email" name="mail">
+        <p>
+        <label for="telefono">Telefonos:</label>
+        <input id="telefono" type="number" name="telefono">
+        <p>
+        <div>
+            <label for="marca">Marca:</label>
+            <input id="marca" type="text" name="marca">
+            <label for="modelo">Modelo:</label>
+            <input id="modelo" type="text" name="modelo">
+            <label for="serie">Nº de serie:</label>
+            <input id="serie" type="text" name="serie">
+        </div>
+        <p>
+           <div id="contenedor">
+            <div>
+        <label class="labeltextarea">Fallas reportadas:</label>
+        <textarea id="fallas"></textarea>
+    </div>
+
+    <div id="div2">
+        <label class="labeltextarea">Notas:</label>
+        <textarea id="notas"></textarea>
+    </div>    
+     </div>
+        <p>
+    	<input id="submit" type="button" name="submitt" value="Agregar">
+    </form>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
     <script src="app.js"></script>
 </body>
 </html>

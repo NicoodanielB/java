@@ -1,29 +1,73 @@
+
+let numerodeorden = "";
+let fecha = "";
+let cliente = "";
+let domicilio = "";
+let mail = "";
+let telefono = "";
+let marca = "";
+let modelo = "";
+let serie = "";
+let fallas = "";
+let notas = "";
+
+var objetos = [];
+
 class Crearelemento{
-    constructor(numerodeorden, especificaciones, reparacion, precio){
-        numerodeorden = numerodeorden;
-        especificaciones = especificaciones;
-        reparacion = reparacion;
-        precio = precio;
+    constructor(numerodeorden, fecha, cliente, domicilio, mail, telefono, marca, modelo, serie, fallas, notas) {
+        this.numerodeorden = numerodeorden;
+        this.fecha = fecha;
+        this.cliente = cliente;
+        this.domicilio = domicilio;
+        this.mail = mail;
+        this.telefono = telefono;
+        this.marca = marca;
+        this.modelo = modelo;
+        this.serie = serie;
+        this.fallas = fallas;
+        this.notas = notas;
     }
 
 }
 
-let numerodeorden = 0;
-let boton = document.getElementById("boton");
+var boton = $("#submit")
+boton.click(function(){
+console.log("Clickeado");
+let elementos = document.querySelector(".formulariodeagregar")
+let seleccionarimputs = elementos.querySelectorAll("input");
+seleccionarimputs.forEach((elemento) => {
 
-boton.addEventListener("click", () => {
-console.log("SELECCIONADO");
-})
-function generarorden(){
- numerodeorden ++;
+if(elemento.name == "numerodeorden"){
+    numerodeorden = elemento.value;
+    elemento.value = "";
+    console.log(numerodeorden);
+}else if(elemento.name == "fecha"){
+    fecha = elemento.value;
+    elemento.value = "";
+    console.log(fecha);
+}else if(elemento.name == "cliente"){
+    cliente = elemento.value;
+    elemento.value = "";
 
- /*    let especificaciones = prompt("Ingrese las especificaciones de la computadora");
-    let reparacion = prompt("Ingrese los daños a reparar");
-    let precio = Number(prompt("Ingrese el precio")); */
-/*     let tabla = document.createElement("table");
-    tabla.setAttribute("border", "3"); intente crear una tabla con celdas pero no pude
-    document.body.appendChild(tabla); */
-
- let elemento = new Crearelemento(numerodeorden, especificaciones, reparacion, precio);
-console.log(numerodeorden);
+}else if(elemento.name == "domicilio"){
+    domicilio = elemento.value;
+    elemento.value = "";
+}else if(elemento.name == "mail"){
+    mail = elemento.value;
+}else if(elemento.name == "telefono"){
+    telefono = elemento.value;
+}else if(elemento.name == "marca"){
+    marca = elemento.value;
+}else if(elemento.name == "modelo"){
+    modelo = elemento.value;
+}else if(elemento.name == "serie"){
+    serie = elemento.value;
+}else if(elemento.name == "fallas"){
+    fallas = elemento.value;
+}else if(elemento.name == "notas"){
+    notas = elemento.value;
 }
+
+} )
+
+objetos.push(new Crearelemento(numerodeorden, fecha, cliente, domicilio, mail, telefono, marca, modelo, serie, fallas, notas)); console.log(numerodeorden);})
